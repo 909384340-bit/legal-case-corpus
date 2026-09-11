@@ -1,0 +1,152 @@
+[
+  {
+    "seq": 1,
+    "file": "01_gzcase-279.md",
+    "title": "指导性案例279号：西[法人01][地点04]沃[法人02]侵害",
+    "case_id": "gzcase-279",
+    "date": "2026-02-28",
+    "mask": 77,
+    "chars": 2966,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490521.html"
+  },
+  {
+    "seq": 2,
+    "file": "02_gzcase-278.md",
+    "title": "指导性案例278号：[地点06]恒[法人05][地点05]日某流量仪器",
+    "case_id": "gzcase-278",
+    "date": "2026-02-28",
+    "mask": 97,
+    "chars": 2867,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490511.html"
+  },
+  {
+    "seq": 3,
+    "file": "03_gzcase-277.md",
+    "title": "指导性案例277号：[地点10]宏[法人07]诉[地点10]远某波纹管",
+    "case_id": "gzcase-277",
+    "date": "2026-02-28",
+    "mask": 73,
+    "chars": 4865,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490501.html"
+  },
+  {
+    "seq": 4,
+    "file": "04_gzcase-276.md",
+    "title": "指导性案例276号：诺[法人01]诉国家知识产权局、第三人[自然人02]",
+    "case_id": "gzcase-276",
+    "date": "2026-02-28",
+    "mask": 22,
+    "chars": 4235,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490491.html"
+  },
+  {
+    "seq": 5,
+    "file": "05_gzcase-275.md",
+    "title": "指导性案例275号：[地点10]金[法人01]诉[地点10]亲某农业产业",
+    "case_id": "gzcase-275",
+    "date": "2026-02-28",
+    "mask": 74,
+    "chars": 2638,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490481.html"
+  },
+  {
+    "seq": 6,
+    "file": "06_gzcase-274.md",
+    "title": "指导性案例274号：[地点24]青[法人01]诉[地点24]晨[法人01]",
+    "case_id": "gzcase-274",
+    "date": "2026-02-28",
+    "mask": 41,
+    "chars": 2037,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490471.html"
+  },
+  {
+    "seq": 7,
+    "file": "07_gzcase-273.md",
+    "title": "指导性案例273号：[法人01]、[地点28][自然人04]汽车",
+    "case_id": "gzcase-273",
+    "date": "2026-02-28",
+    "mask": 105,
+    "chars": 5254,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/490461.html"
+  },
+  {
+    "seq": 8,
+    "file": "08_gzcase-272.md",
+    "title": "指导性案例272号：[自然人09]等危险驾驶案",
+    "case_id": "gzcase-272",
+    "date": "2026-02-13",
+    "mask": 125,
+    "chars": 2912,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/489331.html"
+  },
+  {
+    "seq": 9,
+    "file": "09_gzcase-271.md",
+    "title": "指导性案例271号：[自然人11]危险驾驶案",
+    "case_id": "gzcase-271",
+    "date": "2026-02-13",
+    "mask": 33,
+    "chars": 2069,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/489321.html"
+  },
+  {
+    "seq": 10,
+    "file": "10_gzcase-270.md",
+    "title": "指导性案例270号：[自然人12]危险驾驶案",
+    "case_id": "gzcase-270",
+    "date": "2026-02-13",
+    "mask": 45,
+    "chars": 2712,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/489311.html"
+  },
+  {
+    "seq": 11,
+    "file": "11_gzcase-269.md",
+    "title": "指导性案例269号：[自然人16]交通肇事宣告无罪案",
+    "case_id": "gzcase-269",
+    "date": "2026-02-13",
+    "mask": 33,
+    "chars": 2014,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/489301.html"
+  },
+  {
+    "seq": 12,
+    "file": "12_gzcase-268.md",
+    "title": "指导性案例268号：[自然人18]以危险方法危害公共安全案",
+    "case_id": "gzcase-268",
+    "date": "2026-02-13",
+    "mask": 41,
+    "chars": 2454,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/489291.html"
+  },
+  {
+    "seq": 13,
+    "file": "13_gzcase-267.md",
+    "title": "指导性案例267号：[法人01]与[自然人21]执行实施案",
+    "case_id": "gzcase-267",
+    "date": "2025-08-28",
+    "mask": 96,
+    "chars": 1983,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/474501.html"
+  },
+  {
+    "seq": 14,
+    "file": "14_gzcase-266.md",
+    "title": "指导性案例266号：[自然人22]诉[法人01]个人信息保护纠纷案",
+    "case_id": "gzcase-266",
+    "date": "2025-08-28",
+    "mask": 55,
+    "chars": 2861,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/474491.html"
+  },
+  {
+    "seq": 15,
+    "file": "15_gzcase-265.md",
+    "title": "指导性案例265号：[自然人23]诉[法人05]隐私权、个人信息保护纠纷案",
+    "case_id": "gzcase-265",
+    "date": "2025-08-28",
+    "mask": 51,
+    "chars": 3019,
+    "url": "https://www.court.gov.cn/shenpan/xiangqing/474481.html"
+  }
+]

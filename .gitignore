@@ -1,0 +1,11 @@
+# 未脱敏的中间层与映射表一律不入库（仓库中只保留脱敏成品、脚本与文档）
+data/raw/
+data/clean/
+data/.masking_map.json
+data/llm_patch.json
+
+# 日志与缓存
+logs/*.log
+.DS_Store
+__pycache__/
+*.pyc
