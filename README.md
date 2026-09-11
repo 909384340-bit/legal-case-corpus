@@ -244,15 +244,17 @@ python3 scripts/05_llm_review.py --write-stop   # 复核并把泛指词写入停
 
 依赖：Python 3.9+，**仅用标准库**（urllib / re / json / hashlib），无需安装第三方包。
 
-## 八、推送到 GitHub（作业提交环节）
+## 八、已发布到 GitHub（作业提交环节）
 
-本目录已初始化为 Git 仓库并完成首次提交。推送只需两步：
+- **仓库地址**：https://github.com/909384340-bit/legal-case-corpus
+- 推送方式：SSH（`git remote add origin git@github.com:909384340-bit/legal-case-corpus.git` → `git push -u origin main`）
+- 入库内容：29 个文件（15 篇脱敏成品 + 5 个脚本 + 索引 + 词典 + 复核日志 + 文档）
+
+复现推送步骤（换仓库时）：
 
 ```bash
-# 1. 在 GitHub 上新建一个空仓库（不要勾选初始化 README / .gitignore / LICENSE）
-# 2. 在本机执行（把地址换成你自己的）
 cd 01_数据闭环
-git remote add origin git@github.com:<你的用户名>/legal-case-corpus.git
+git remote add origin git@github.com:<你的用户名>/<仓库名>.git
 git branch -M main
 git push -u origin main
 ```
