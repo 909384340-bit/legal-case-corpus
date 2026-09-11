@@ -326,20 +326,9 @@ class Masker:
                 stats[label] = stats.get(label, 0) + n
 
         # ①-2 匿名化机构名预置规则："某信用管理有限公司""某科技有限公司"等
-        ANON_ORG = (r"某[\u4e00-\u9fa5A-Za-z0-9（）()]{0,12}?"
-                    r"(?:股份有限公司|有限责任公司|有限公司|集团公司|公司|研究院|银行|集团)")
-        for name in sorted({clean_entity_name(c) for c in
-                            overlap_candidates(text, re.compile(ANON_ORG))}, key=len, reverse=True):
-            if name in GENERIC_ORGS or any(w in name for w in BAD_ORG_WORDS) or len(name) < 3:
-                continue
-            ph = self.get(name, "法人")
-            cnt = text.count(name)
-            if cnt:
-                text = text.replace(name, ph)
-                stats["法人"] = stats.get("法人", 0) + cnt
-
-        # ①-2 匿名化机构名预置规则："某信用管理有限公司""某科技有限公司"等
-        ANON_ORG = (r"某[\u4e00-\u9fa5A-Za-z0-9（）()]{0,12}?"
+        # 官方匿名化的法人名形如"某信用管理有限公司""西某工业软件有限公司"，
+        # 前缀可能是"某"，也可能是"任意单字+某"（姓氏字不固定，故不依赖姓氏表）
+        ANON_ORG = (r"(?:[\u4e00-\u9fa5]某|某)[\u4e00-\u9fa5A-Za-z0-9（）()]{0,12}?"
                     r"(?:股份有限公司|有限责任公司|有限公司|集团公司|公司|研究院|银行|集团)")
         for name in sorted({clean_entity_name(c) for c in
                             overlap_candidates(text, re.compile(ANON_ORG))}, key=len, reverse=True):
@@ -352,12 +341,28 @@ class Masker:
                 stats["法人"] = stats.get("法人", 0) + cnt
 
         # ② 自然人（先于机构处理，避免"黄某欢在某应用"被产品规则切碎）
+        #    但若"姓氏某"后紧跟机构后缀（西某工业、沃某模具、青某重工），说明它是
+        #    法人名的一部分而非自然人，交由匿名机构名规则整体处理
+        ORG_TAIL = ("工业", "科技", "重工", "机械", "汽车", "仪器", "农业", "软件", "模具",
+                    "集团", "公司", "有限", "控股", "网络", "信息", "技术", "传媒", "热电",
+                    "能源", "化工", "电子", "医药", "食品", "建设", "地产", "物流", "贸易",
+                    "实业", "投资", "银行", "电气", "智能", "数据", "环保", "材料", "生物")
         for name in persons:
-            if name in text:
-                ph = self.get(name, "自然人")
-                cnt = text.count(name)
-                text = text.replace(name, ph)
-                stats["自然人"] = stats.get("自然人", 0) + cnt
+            if name not in text:
+                continue
+            ph = self.get(name, "自然人")
+            hit = [0]
+
+            def _rep(m, ph=ph, hit=hit):
+                tail = m.string[m.end():m.end() + 2]
+                if any(tail.startswith(w) for w in ORG_TAIL):
+                    return m.group(0)
+                hit[0] += 1
+                return ph
+
+            text = re.sub(re.escape(name), _rep, text)
+            if hit[0]:
+                stats["自然人"] = stats.get("自然人", 0) + hit[0]
 
         # ③ 机构/组织/产品实体：后缀锚定 + 重叠扫描 + 名称清洗，长实体优先
         ORG_SUFFIX = (r"(?:股份有限公司|有限责任公司|有限公司|集团公司|公司|研究院|"
